@@ -1,2 +1,5 @@
 node_modules
 dist
+config
+git_rsa
+git_rsa.pub
