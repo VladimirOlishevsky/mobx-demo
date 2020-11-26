@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Card from "./Card";
-import Form from './Form';
-import Comments from "./Comments";
+import React from "react";
+import { Form } from './Form';
+import { Comments } from "./Comments";
+import { Card } from './Card'
 
 export default function Dashboard() {
   return (

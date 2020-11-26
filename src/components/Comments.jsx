@@ -1,14 +1,13 @@
-import React, { useContext } from 'react';
-import { StoreContext } from '../main';
-import { useObserver } from 'mobx-react';
+import React from 'react';
+import { observer } from 'mobx-react';
+import storeInstance from '../store/Store'
 
-export default function Comments() {
-    const store = useContext(StoreContext)
-    return useObserver(() => (
+export const Comments = observer(() => {
+    return (
         <table className="table">
             <tbody>
                 {
-                    store.comments.map((comment, index) => {
+                    storeInstance.comments.map((comment, index) => {
                         return (
                             <tr key={index}>
                                 <td>
@@ -22,5 +21,5 @@ export default function Comments() {
             </tbody>
         </table>
     )
-    )
-}
+
+})

@@ -1,30 +1,27 @@
-import React, { useContext } from 'react';
-import { StoreContext } from '../main';
+import React, { useRef } from 'react';
+import storeInstance from '../store/Store'
+import { observer } from "mobx-react";
 
-export default class Form extends React.Component {
+export const Form = observer(() => {
 
-    handleSubmit = (e, store) => {
+    let textInput = useRef();
+
+    const handleSubmit = (e, store) => {
         e.preventDefault();
-        store.postComment(this.comment.value);
-        this.comment.value = "";
+        store.postComment(textInput.value);
+        textInput.value = "";
     }
-
-    render() {
-        return (
-            <StoreContext.Consumer>
-                {
-                    store => (
-
-                        <form onSubmit={(e) => this.handleSubmit(e, store)}>
-                            <div>
-                                <input type="text" id={'comment'} className="form-control" placeholder={"Write a comment ..."} ref={node => {
-                                    this.comment = node;
-                                }} />
-                            </div>
-                        </form>
-                    )
-                }
-            </StoreContext.Consumer>
-        )
-    }
-}
+    
+    return (
+        <form onSubmit={(e) => handleSubmit(e, storeInstance)}>
+            
+            <div>
+                <input type="text" id={'comment'} className="form-control" placeholder={"Write a comment ..."} 
+                ref={value => {
+                    textInput = value
+                }} 
+                />
+            </div>
+        </form>
+    )
+})

@@ -25,8 +25,7 @@ module.exports = {
         }
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 // compile es6 jsx into normal ES5
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -47,7 +46,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
             filename: "index.html",
-            title: "Learning Webpack"
+            title: "Learning Webpack",
+            favicon: "./src/img/mobx.ico"
         }),
     ]
 }

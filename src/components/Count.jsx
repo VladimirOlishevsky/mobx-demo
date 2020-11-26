@@ -1,18 +1,17 @@
-import React, { useContext } from 'react';
-import { useObserver } from 'mobx-react';
-import { StoreContext } from '../main';
+import React from 'react';
+import { observer } from "mobx-react";
 import storeInstance from '../store/Store'
 
-export default function Count() {
-    const store = useContext(StoreContext);
-    return useObserver(() => (
+
+export const Count = observer(() => {
+    return (
         <div className="row reactions-count" >
             <div className="col-sm" align="left">
                 <i className="fa fa-thumbs-up" />{storeInstance.likesCount}
             </div>
             <div className="col-sm" align="right">
-                {store.commentsCount} comments
+                {storeInstance.commentsCount} comments
         </div>
         </div>
-    ))
-}
+    )
+})
