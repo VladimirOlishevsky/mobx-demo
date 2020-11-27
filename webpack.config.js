@@ -19,7 +19,7 @@ module.exports = {
         open: true
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx'],
+        extensions: ['*', '.js', '.jsx', '.tsx'],
         alias: {
             '@': path.resolve(__dirname, 'src') // shortcut to reference src folder from anywhere
         }
@@ -31,6 +31,12 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.ts|\.tsx$/,
+                use: {
+                    loader: 'awesome-typescript-loader'
                 }
             },
             {

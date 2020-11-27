@@ -3,6 +3,8 @@ import { observer } from "mobx-react";
 import storeInstance from '../store/Store'
 
 export const Buttons = observer(() => {
+
+    console.log(document.getElementById('comment'));
     return (
         <div className="row">
             <div className="col-sm">
@@ -18,7 +20,8 @@ export const Buttons = observer(() => {
                 <button
                     type="button"
                     className="btn btn-light"
-                    onClick={() => document.getElementById('comment').focus()}>
+                    //onClick={() => document.getElementById('comment') && document.getElementById('comment').focus()}
+                    >
                     <i className="fa fa-comment-o" />
                     Comment
                     </button>

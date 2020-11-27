@@ -1,29 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
-    "noEmit": true,
-    "jsx": "react",
-    "noEmitHelpers": true,
-    "importHelpers": true,
-    "strictNullChecks": false,
-    "lib": [
-      "dom",
-      "es6"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ]
-  },
-  "exclude": [
-    "node_modules",
-    "build"
-  ],
-  "compileOnSave": false,
-  "buildOnSave": false
+    "compilerOptions": {
+        "target": "es6",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "lib": ["es6", "dom"],
+        "downlevelIteration": true,
+        "alwaysStrict": true,
+        "sourceMap": true,
+        "declaration": true,
+        "removeComments": false,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "noImplicitAny": false,
+        "noImplicitThis": false,
+        "noEmit": true,
+        "experimentalDecorators": true,
+        "useDefineForClassFields": true,
+        "jsx": "react",
+        "esModuleInterop": true
+    },
+    "exclude": ["__tests__"]
 }
