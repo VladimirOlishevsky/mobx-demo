@@ -19,7 +19,7 @@ module.exports = {
         open: true
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx', '.tsx'],
+        extensions: ['*', '.js', '.jsx', '.tsx', '.ts'],
         alias: {
             '@': path.resolve(__dirname, 'src') // shortcut to reference src folder from anywhere
         }
