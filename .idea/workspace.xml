@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7431b436-2062-431f-be18-c67bf4a9a8b7" name="Default Changelist" comment="" />
+    <list default="true" id="7431b436-2062-431f-be18-c67bf4a9a8b7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../africa-rn" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.EditorConfig" />
     <property name="ts.external.directory.path" value="D:\JS Projects\test differents\mobx-demo\node_modules\typescript\lib" />
@@ -37,6 +39,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607358848515</updated>
       <workItem from="1607358849711" duration="1177000" />
+      <workItem from="1607709428053" duration="669000" />
+      <workItem from="1607782001740" duration="45000" />
     </task>
     <servers />
   </component>

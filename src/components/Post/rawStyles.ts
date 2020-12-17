@@ -6,6 +6,6 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center'
     },
     content: {
-        width: 26 + 'rem'
+        maxWidth: 888
     }
   }));

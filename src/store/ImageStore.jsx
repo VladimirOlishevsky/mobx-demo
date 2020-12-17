@@ -10,6 +10,7 @@ class ImageStore {
         const characterId = ++this.id
         const response = await fetch(`https://rickandmortyapi.com/api/character/${characterId}`)
         const data = await response.json()
+        console.log(data);
 
         runInAction(() => {
             this.imageUrl = data.image
