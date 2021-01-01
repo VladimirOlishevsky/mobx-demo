@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+import { appWidth } from './constants';
 
 export const useStyles = makeStyles((theme) => ({
     mainContainer: {
@@ -6,6 +7,6 @@ export const useStyles = makeStyles((theme) => ({
         justifyContent: 'center'
     },
     content: {
-        maxWidth: 888
+        maxWidth: appWidth
     }
   }));

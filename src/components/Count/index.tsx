@@ -9,24 +9,20 @@ export const Count = observer(() => {
 
     const styles = rawStyles();
     return (
-        <Grid container direction='row'>
+        <Grid
+            container
+            direction='column'
+            spacing={1}>
             <Grid item>
                 <ThumbUpAltSharpIcon
                     className={styles.iconStyle}
                     color="secondary" />
-                    {storeInstance.likesCount}
+                {' '}
+                {storeInstance.likesCount}
             </Grid>
             <Grid item>
-                {storeInstance.commentsCount} comments
+                {`${storeInstance.commentsCount} comments`}
             </Grid>
         </Grid>
-        // <div className="reactions-count" >
-        //     <div className="col-sm" align="left">
-        //         <i className="fa fa-thumbs-up" />{storeInstance.likesCount}
-        //     </div>
-        //     <div className="col-sm" align="right">
-        //         {storeInstance.commentsCount} comments
-        // </div>
-        // </div>
     )
 })

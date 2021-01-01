@@ -15,7 +15,6 @@ export const useStyles = makeStyles((theme) => ({
     },
     fa: {
         fontSize: 'x-large'
-        //margin-right: 8px;
     }
 
   }));

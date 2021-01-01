@@ -8,15 +8,28 @@ import Image from 'material-ui-image';
 import imageStore from '../../store/ImageStore'
 import { Buttons } from '../Buttons/index';
 
-export const Card = observer(() => {
+interface Props {
+    mainPicture: React.ReactNode,
+    buttonLeafOver: React.ReactNode,
+    countsLikeComment: React.ReactNode,
+    buttonsLikeComment: React.ReactNode
+}
+
+export const Card = observer(({
+    mainPicture,
+    buttonLeafOver,
+    countsLikeComment,
+    buttonsLikeComment
+}) => {
 
     const styles = useStyles();
     return (
         <Grid
             className={styles.card}>
-            <Image
+                {mainPicture}
+            {/* <Image
                 src={imageStore.imageUrl}
-                alt="..." />
+                alt="..." /> */}
             <Button
                 className={styles.buttonChevron}
                 onClick={() => imageStore.fetchImage()}>
