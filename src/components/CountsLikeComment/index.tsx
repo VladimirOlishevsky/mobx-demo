@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 import ThumbUpAltSharpIcon from '@material-ui/icons/ThumbUpAltSharp';
 import { rawStyles } from './rawStyles'
 
-export const Count = observer(() => {
+export const CountsLikeComment = observer(() => {
 
     const styles = rawStyles();
     return (

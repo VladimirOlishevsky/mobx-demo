@@ -15,7 +15,7 @@ class ImageStore {
             this.imageUrl = data.image
         })
     }
-
+s
 }
 
 const imageStore = new ImageStore()

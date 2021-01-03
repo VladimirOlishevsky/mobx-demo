@@ -1,8 +1,6 @@
 import { makeStyles, Theme } from "@material-ui/core";
 
-export const rawStyles = makeStyles((theme: Theme) => {
-    console.log(theme)
-    return ({
+export const rawStyles = makeStyles((theme: Theme) => ({
     iconLike: {
         marginRight: theme.spacing(1.5),
         "&.Mui-focused": {
@@ -14,4 +12,4 @@ export const rawStyles = makeStyles((theme: Theme) => {
             outline: 'none'
           }
     }
-  })});
+  }));

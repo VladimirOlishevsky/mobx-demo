@@ -4,21 +4,20 @@ import './css/main.css'
 import storeInstance from './store/Store'
 import { Post } from './components/Post';
 import { Card } from './components/Card';
-// import { Image } from 'material-ui-image';
-// import imageStore from "./store/ImageStore";
+import imageStore from "./store/ImageStore";
+import { ButtonLeafOver } from './components/ButtonLeafOver/index';
+import { MainImage } from './components/MainImage/index';
+import { CountsLikeComment } from './components/CountsLikeComment/index';
+import { ButtonsLikeComment } from './components/ButtonsLikeComment/index';
 
 ReactDOM.render(
     <Post
         card={
             <Card
-                mainPicture={
-
-                <Image
-                    src={imageStore.imageUrl}
-                    alt="..." />}
-                // buttonLeafOver,
-                // countsLikeComment,
-                // buttonsLikeComment
+                mainImage={<MainImage />}
+                buttonLeafOver={<ButtonLeafOver />}
+                countsLikeComment={<CountsLikeComment />}
+                buttonsLikeComment={<ButtonsLikeComment />}
             />}
         value={storeInstance} />,
     document.getElementById('app'));

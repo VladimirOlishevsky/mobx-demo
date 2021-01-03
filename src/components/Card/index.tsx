@@ -1,45 +1,32 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import { Grid } from "@material-ui/core";
 import { observer } from "mobx-react";
-import { Count } from '../Count/index';
 import { useStyles } from './rawStyles';
-import Image from 'material-ui-image';
-import imageStore from '../../store/ImageStore'
-import { Buttons } from '../Buttons/index';
+import { Form } from './../Form/index';
 
 interface Props {
-    mainPicture: React.ReactNode,
+    mainImage: React.ReactNode,
     buttonLeafOver: React.ReactNode,
     countsLikeComment: React.ReactNode,
     buttonsLikeComment: React.ReactNode
 }
 
 export const Card = observer(({
-    mainPicture,
+    mainImage,
     buttonLeafOver,
     countsLikeComment,
     buttonsLikeComment
-}) => {
+}: Props) => {
 
     const styles = useStyles();
     return (
         <Grid
             className={styles.card}>
-                {mainPicture}
-            {/* <Image
-                src={imageStore.imageUrl}
-                alt="..." /> */}
-            <Button
-                className={styles.buttonChevron}
-                onClick={() => imageStore.fetchImage()}>
-                <ChevronRightIcon />
-            </Button>
-            <Count />
-            <Grid
-                className={styles.cardBody} >
-                <Buttons />
-            </Grid>
+            {mainImage}
+            {buttonLeafOver}
+            {countsLikeComment}
+            {buttonsLikeComment}
+            <Form />
         </Grid>
     )
 })

@@ -7,13 +7,13 @@ import SmsOutlinedIcon from '@material-ui/icons/SmsOutlined';
 import { rawStyles } from './rawStyles'
 import { buttonsName } from "./config";
 
-export const Buttons = observer(() => {
+export const ButtonsLikeComment = observer(() => {
 
     const styles = rawStyles();
 
     return (
-        <Grid item container direction='row'>
-            <Grid item className="col-sm">
+        <Grid item container direction='row' justify='flex-end'>
+            <Grid item >
                 <Button
                     color="secondary"
                     className={styles.buttonStyle}
@@ -24,7 +24,7 @@ export const Buttons = observer(() => {
                    {buttonsName.like}
                 </Button>
             </Grid>
-            <Grid item className="col-sm">
+            <Grid item >
                 <Button
                     className={styles.buttonStyle}
                     onClick={() => storeInstance.updateCount()}>
