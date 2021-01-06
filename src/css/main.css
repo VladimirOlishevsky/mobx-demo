@@ -2,7 +2,7 @@
     width: 26rem;
 }
 
-.card-body{
+.card-body {
     padding: 12px;
 }
 
@@ -28,11 +28,6 @@ form {
     padding: 8px;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem;
-}
-
-input[type="text"] {
-    border-radius: 22px;
-    background: #F2F3F5;
 }
 
 .table {

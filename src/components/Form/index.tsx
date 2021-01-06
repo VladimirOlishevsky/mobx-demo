@@ -1,28 +1,32 @@
-import React, { useRef } from 'react';
+import React, { FormEvent, useState, useRef } from 'react';
 import storeInstance from '../../store/Store'
 import { observer } from "mobx-react";
-import { FormLabel } from "@material-ui/core";
+import { Button, InputBase } from "@material-ui/core";
+import { useStyles } from './rawStyles';
 
 export const Form = observer(() => {
 
-    let textInput = useRef();
-
-    const handleSubmit = (e, store) => {
-        e.preventDefault();
-        store.postComment(textInput.value);
-        textInput.value = "";
+const [inputValue, setInputValue] = useState('')
+    const styles = useStyles();
+    const handleSubmit = (event: FormEvent<HTMLFormElement>, store: any) => {
+        event.preventDefault();
+        store.postComment(inputValue);
+        setInputValue('');
     }
-    
+
+    const handleChange = (value: string) => {
+        setInputValue(value)
+    }
     return (
-        <FormLabel onSubmit={(e) => handleSubmit(e, storeInstance)}>
-            
-            <div>
-                <input type="text" id={'comment'} className="form-control" placeholder={"Write a comment ..."} 
-                ref={value => {
-                    textInput ? textInput = value : null
-                }} 
-                />
-            </div>
-        </FormLabel>
+        <form
+            className={styles.form}
+            onSubmit={(e) => handleSubmit(e, storeInstance)}>
+            <InputBase
+                value={inputValue}
+                onChange={(e) => handleChange(e.currentTarget.value)}
+                className={styles.input}
+                 />
+            <Button type="submit">add comment</Button>
+        </form>
     )
 })
